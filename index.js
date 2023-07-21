@@ -34,3 +34,19 @@ const productdata = (e) => {
 };
 
 document.querySelector("form").addEventListener("submit", productdata);
+
+const handlelth = () => {
+  let data = products.sort((a, b) => a.price - b.price);
+  ui(data);
+  console.log(data);
+};
+
+document.getElementById("lth").addEventListener("click", handlelth);
+
+const handlehtl = () => {
+  let data = products.sort((a, b) => b.price - a.price);
+  ui(data);
+  console.log(data);
+};
+
+document.getElementById("htl").addEventListener("click", handlehtl);

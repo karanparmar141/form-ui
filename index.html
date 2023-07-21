@@ -17,6 +17,7 @@
         text-align: center;
         margin: 12px;
         border: 2px solid black;
+        overflow: hidden;
     }
     @media (max-width:770px) {
         #ui div {
@@ -27,7 +28,7 @@
 <body>
     <div class="container">
         <form>
-            <div class="col-4 mx-auto border border-2 border-dark p-4 shodow ">
+            <div class="col-md-4 col-12 mx-auto border border-2 border-dark p-4 shodow ">
                 <h2 class="text-capitalize text-center mb-5">enter your prodcut details</h2>
                 <input type="text" placeholder="title" id="title" class="d-block my-3 col-12 border-end-0 border-start-0 border-top-0 border-info text-capitalize">
                 <input type="url" placeholder="url" id="img" class="d-block my-3 col-12 border-end-0 border-start-0 border-top-0 border-info text-capitalize">
@@ -37,6 +38,8 @@
             </div>
         </form>
         <hr>
+            <button id="lth" class="btn btn-primary">low to high</button>
+            <button id="htl" class="btn btn-primary">high to low</button>
         <div id="ui">
         </div>
     </div>
