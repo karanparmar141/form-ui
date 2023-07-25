@@ -51,16 +51,14 @@ const handlehtl = () => {
 
 document.getElementById("htl").addEventListener("click", handlehtl);
 
-
+// filter 
 
 const Handelcategory = (cat) => {
   let data = products.filter((value) => value.category == cat);
-
-  console.log(data);
   ui(data);
 };
 
-let cat = ["i phone", "andriod"];
+let cat = ["ios Phone", "android"];
 
 for (let i = 0; i < cat.length; i++) {
   let btn = document.createElement("button");
@@ -74,3 +72,12 @@ for (let i = 0; i < cat.length; i++) {
     .getElementById(cat[i])
     .addEventListener("click", () => Handelcategory(cat[i]));
 }
+
+// search 
+
+  let search=()=>{
+    let val=document.getElementById("value").value
+    let data = products.filter((se) => se.title == val.toLowerCase());
+    ui(data);
+  }
+  document.getElementById("search").addEventListener("click",search)
