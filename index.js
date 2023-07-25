@@ -74,10 +74,16 @@ for (let i = 0; i < cat.length; i++) {
 }
 
 // search 
+let search=()=>{
+  let value=document.getElementById("value").value
+  let data = products.filter((val) =>val.name.includes(value.toLowerCase()));
+  ui(data);
+}
 
-  let search=()=>{
-    let val=document.getElementById("value").value
-    let data = products.filter((se) => se.title == val.toLowerCase());
-    ui(data);
-  }
-  document.getElementById("search").addEventListener("click",search)
+document.getElementById("value").addEventListener("keypress",(e)=>{
+  if(e.key == "Enter"){
+          search();
+      }
+})
+
+document.getElementById("search").addEventListener("click",search)
