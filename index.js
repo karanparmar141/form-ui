@@ -76,7 +76,7 @@ for (let i = 0; i < cat.length; i++) {
 // search 
 let search=()=>{
   let value=document.getElementById("value").value
-  let data = products.filter((val) =>val.name.includes(value.toLowerCase()));
+  let data = products.filter((val) =>val.title.includes(value.toLowerCase()));
   ui(data);
 }
 
